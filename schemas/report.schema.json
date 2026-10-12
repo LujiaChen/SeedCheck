@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Report",
+  "description": "A report written from a source document. It is either a clean copy or a copy with planted errors.",
+  "type": "object",
+  "required": ["report_id", "source_id", "variant", "text"],
+  "additionalProperties": false,
+  "properties": {
+    "report_id": {
+      "type": "string",
+      "pattern": "^rep_[0-9]{3}_(clean|inj)$"
+    },
+    "source_id": {
+      "type": "string",
+      "pattern": "^src_[0-9]{3}$"
+    },
+    "variant": {
+      "enum": ["clean", "injected"]
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "generator": {
+      "type": "object",
+      "required": ["model_id"],
+      "additionalProperties": false,
+      "properties": {
+        "model_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "prompt_hash": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"variant": {"const": "clean"}}},
+      "then": {"properties": {"report_id": {"pattern": "_clean$"}}}
+    },
+    {
+      "if": {"properties": {"variant": {"const": "injected"}}},
+      "then": {"properties": {"report_id": {"pattern": "_inj$"}}}
+    }
+  ]
+}

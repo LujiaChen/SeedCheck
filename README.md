@@ -1,4 +1,4 @@
-# seedcheck
+# SeedCheck
 
 Seeded-error benchmark for LLM reviewer agents.
 

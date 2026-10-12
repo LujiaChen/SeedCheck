@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "SourceDoc",
+  "description": "A source document that reports are written from.",
+  "type": "object",
+  "required": ["source_id", "text", "license"],
+  "additionalProperties": false,
+  "properties": {
+    "source_id": {
+      "type": "string",
+      "pattern": "^src_[0-9]{3}$"
+    },
+    "text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "license": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

@@ -1,0 +1,28 @@
+# Secrets - never commit
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# OpenClaw / local state
+.openclaw/
+*.sqlite
+*.sqlite3
+*.db
+
+# Raw model responses (a curated replay cache is published separately)
+runs/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+.ruff_cache/
+*.egg-info/
+
+# macOS / editors
+.DS_Store
+.idea/
+.vscode/

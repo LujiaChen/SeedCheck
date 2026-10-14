@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ReviewerOutput",
+  "type": "object",
+  "required": ["issues"],
+  "additionalProperties": false,
+  "properties": {
+    "issues": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["quote", "category", "explanation"],
+        "additionalProperties": false,
+        "properties": {
+          "quote": {"type": "string", "minLength": 1},
+          "category": {"enum": ["numeric_change", "entity_swap", "unsupported_claim", "other"]},
+          "explanation": {"type": "string", "minLength": 1}
+        }
+      }
+    }
+  }
+}

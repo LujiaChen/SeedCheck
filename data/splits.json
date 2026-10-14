@@ -1,0 +1,6 @@
+{
+  "description": "Illustrative file-level split manifest. These starter examples are software fixtures, not a research sample.",
+  "development": ["data/dev/case_numeric.json"],
+  "test": [],
+  "rule": "Freeze reviewer prompt and configuration using development items only. Add separate source/report cases to test only after the prompt is frozen. Never tune against test items."
+}

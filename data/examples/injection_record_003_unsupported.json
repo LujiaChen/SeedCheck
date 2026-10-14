@@ -1,0 +1,10 @@
+{
+  "injection_id": "inj_003",
+  "report_id": "rep_003_inj",
+  "error_type": "unsupported_claim",
+  "original_text": null,
+  "injected_text": " The company won a national design award in 2024.",
+  "start": 61,
+  "end": 110,
+  "explanation": "The planted sentence adds a claim that is not supported by the source document."
+}

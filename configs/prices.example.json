@@ -1,0 +1,5 @@
+{
+  "description": "Fill in prices from the provider's current published rate card before estimating cost. Missing model prices remain null.",
+  "usd_per_million_input_tokens": {},
+  "usd_per_million_output_tokens": {}
+}

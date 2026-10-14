@@ -1,0 +1,10 @@
+{
+  "injection_id": "inj_001",
+  "report_id": "rep_001_inj",
+  "error_type": "numeric_change",
+  "original_text": "240",
+  "injected_text": "420",
+  "start": 80,
+  "end": 83,
+  "explanation": "The planted employee count changes the source-supported value from 240 to 420."
+}

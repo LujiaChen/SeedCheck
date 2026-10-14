@@ -1,0 +1,16 @@
+{
+  "source": {
+    "source_id": "src_001",
+    "text": "Harbor Works Ltd. opened its second plant in Windsor in 2019. The plant employs 240 people and produces 1,200 pumps per month. In 2023 the company reported revenue of 18.5 million dollars. Its chief engineer, Dana Ruiz, leads the pump design team.",
+    "license": "self-written"
+  },
+  "report": {
+    "report_id": "rep_001_inj",
+    "source_id": "src_001",
+    "variant": "injected",
+    "text": "Harbor Works Ltd. opened its second plant in Windsor in 2019. The plant employs 420 people and produces 1,200 pumps per month. In 2023 the company reported revenue of 18.5 million dollars. Its chief engineer, Dana Ruiz, leads the pump design team."
+  },
+  "records": [
+    {"injection_id": "inj_001", "report_id": "rep_001_inj", "error_type": "numeric_change", "original_text": "240", "injected_text": "420", "start": 80, "end": 83, "explanation": "The planted employee count changes the source-supported value from 240 to 420."}
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "injection_id": "inj_002",
+  "report_id": "rep_002_inj",
+  "error_type": "entity_swap",
+  "original_text": "Windsor",
+  "injected_text": "London",
+  "start": 45,
+  "end": 51,
+  "explanation": "The planted entity swap changes the reported plant location."
+}

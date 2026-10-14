@@ -13,6 +13,8 @@
 
 # Raw model responses (a curated replay cache is published separately)
 runs/
+.seedcheck-cache/
+work/
 
 # Python
 __pycache__/

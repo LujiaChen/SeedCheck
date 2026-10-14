@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "InjectionRecord",
+  "description": "Ground-truth record for one error planted in an injected report.",
+  "type": "object",
+  "required": [
+    "injection_id",
+    "report_id",
+    "error_type",
+    "original_text",
+    "injected_text",
+    "start",
+    "end",
+    "explanation"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "injection_id": {
+      "type": "string",
+      "pattern": "^inj_[0-9]{3}$"
+    },
+    "report_id": {
+      "type": "string",
+      "pattern": "^rep_[0-9]{3}_inj$"
+    },
+    "error_type": {
+      "enum": ["numeric_change", "entity_swap", "unsupported_claim"]
+    },
+    "original_text": {
+      "type": ["string", "null"],
+      "minLength": 1
+    },
+    "injected_text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "start": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "end": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "explanation": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}

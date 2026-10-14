@@ -1,0 +1,14 @@
+{
+  "dataset": "data/dev",
+  "cache_dir": ".seedcheck-cache",
+  "ledger": "results/ledger.jsonl",
+  "budget_usd": 1.0,
+  "prices_usd_per_million_tokens": {},
+  "configurations": [
+    {"id": "C0", "kind": "baseline", "mode": "script"},
+    {"id": "C1", "kind": "reviewer", "mode": "mock", "model_id": "mock/self-review"},
+    {"id": "C2", "kind": "reviewer", "mode": "mock", "model_id": "mock/same-tier"},
+    {"id": "C3", "kind": "reviewer", "mode": "mock", "model_id": "mock/stronger-same-provider"},
+    {"id": "C4", "kind": "reviewer", "mode": "mock", "model_id": "mock/similar-tier-other-provider"}
+  ]
+}

@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "seedcheck"
+version = "0.1.0"
+description = "A reproducible benchmark for source-grounded report reviewers"
+requires-python = ">=3.11"
+dependencies = ["jsonschema>=4.20"]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[project.scripts]
+seedcheck = "seedcheck.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
